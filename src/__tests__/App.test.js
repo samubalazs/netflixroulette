@@ -1,13 +1,16 @@
-import * as actions from '../actions/movieActions'
-import * as types from '../reducers/movieReducer'
-​
-describe('actions', () => {
-  it('should create an action to add a todo', () => {
-    const text = 'Finish docs'
-    const expectedAction = {
-      type: types.ADD_TODO,
-      text
-    }
-    expect(actions.addTodo(text)).toEqual(expectedAction)
-  })
+import React from 'react';
+import renderer from 'react-test-renderer';
+import {Provider} from "react-redux";
+
+import App from '../App';
+import store from "../actions/store";
+
+describe('Checking the list of the Movies', () => {
+
+  it('should render the component correctly', () => {
+    const rendered = renderer.create(
+      <Provider store={store}><App /></Provider>
+    );
+    expect(rendered.toJSON()).toMatchSnapshot();
+  });
 })
