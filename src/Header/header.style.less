@@ -1,0 +1,62 @@
+@import url("../App.style.less");
+
+.rouletteHeader {
+  background-color: @netflix-black;
+  padding-bottom: 20px;
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: @netflix-red;
+  }
+
+  .title {
+    font-size: 25px;
+    color: @netflix-white;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    border-bottom-color: @netflix-red;
+    border-bottom-width: thick;
+  }
+
+  .menu-bar {
+
+    .info-text {      
+      color: @netflix-white;
+      text-transform: uppercase;
+
+      span {
+        margin-right: 15px;
+      }      
+    }
+
+    button {
+      text-transform: uppercase;
+      color: @netflix-white;
+      margin-right: 20px;
+      font-weight: bold;
+
+      &.search-by-title {
+        background-color: @netflix-red-button;
+        border-color: @netflix-red;
+      }
+
+      &.search-by-genre {
+        background-color: @netflix-grey-button;
+        border-color: @netflix-black;
+      }
+
+      &.search {
+        float: right;
+        background-color: @netflix-red-button;
+        border-color: @netflix-red;
+        width: 120px;
+        margin-right: 0;
+      }
+    }
+  }
+}
