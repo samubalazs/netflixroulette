@@ -17,7 +17,6 @@ class Movielist extends Component {
     this.state = {
       isLoading: true
     };
-    console.log(this.props);
   }
 
   componentDidMount() {
